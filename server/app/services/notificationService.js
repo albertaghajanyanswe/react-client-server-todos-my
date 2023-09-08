@@ -37,7 +37,7 @@ class NotificationService {
                 resolve(res);
             } catch(err) {
                 if (userId) {
-                    await Users.update({ firebaseToken: null }, { where: { id: userId } });
+                  await Users.update({ firebaseToken: null }, { where: { id: userId } });
                 }
                 console.log("\n\n\n Could not sent push notification. Error\n ", err, "\n\n")
             }
